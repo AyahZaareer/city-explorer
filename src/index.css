@@ -5,9 +5,43 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #F5CEBE;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+h1{
+  margin-left: 50px;
+}
+form
+{
+  margin-left:50px ;
+}
+p{
+  margin-left: 50px;
+}
+img{
+  margin-left: 50px;
+}
+label
+{
+  font-size: 30px;
+}
+input
+{
+  width: 50%;
+  height: 20px;
+  margin-top: 5px;
+}
+header
+{
+  background-color: gray;
+  height: 50px;
+  
+}
+h4{
+  margin-left: 50px;
+}
+
