@@ -20,15 +20,46 @@
 
  ## My deployed link: city-exeplorer-ayah.netlify.app
 
-Name of feature: ________________________________
+**Name of feature :feature#1 Set up your React repository & API keys.**
 
-Estimate of time needed to complete: _____
+**Estimate of time needed to complete: half hour**
 
-Start time: _____
+**Start time: 4:00pm**
 
-Finish time: _____
+**Finish time:5:00pm**
 
-Actual time needed to complete: _____
+**Actual time needed to complete: 1 hour**
+
+
+**Name of feature :feature#2 . Locations: As a user of City Explorer, I want to enter the name of a location so that I can see the exact latitude and longitude of that location.**
+
+**Estimate of time needed to complete:one hour**
+
+**Start time: 9:00pm**
+
+**Finish time:10:00pm**
+
+**Actual time needed to complete: one hour**
+
+**Name of feature :feature#3 . Map: As a user, I want to see a map of the city so that I can see the layout of the area I want to explore.**
+
+**Estimate of time needed to complete: one hour**
+
+**Start time: 10:00pm**
+
+**Finish time:11:30pm**
+
+**Actual time needed to complete: 1.5 hour**
+
+**Name of feature :feature#4 Errors: As a user, I want clear messages if something goes wrong so I know if I need to make any changes or try again in a different manner.**
+
+**Estimate of time needed to complete: ----**
+
+**Start time: ------**
+
+**Finish time:--------**
+
+**Actual time needed to complete: ------**
 
 
 ## Our Daigram:
