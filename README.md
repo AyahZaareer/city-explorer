@@ -79,15 +79,15 @@
 #### So many use the state that I don't know what it means and how to use it. And also some functions that I do not understand what they do. But Muhammad helped me understand that which is not understood by me.
 
 
-**Name of feature :feature#1 **
+**Name of feature :feature#1 Set up your server repository.**
 
-**Estimate of time needed to complete: ----**
+**Estimate of time needed to complete:1 hour**
 
-**Start time: ------**
+**Start time: 4:30 pm**
 
-**Finish time:--------**
+**Finish time: 7:00**
 
-**Actual time needed to complete: ------**
+**Actual time needed to complete: 2.5 hours**
 
 ## Our Daigram:
 
