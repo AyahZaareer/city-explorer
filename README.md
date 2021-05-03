@@ -60,13 +60,13 @@
 
 **Name of feature :feature#4 Errors: As a user, I want clear messages if something goes wrong so I know if I need to make any changes or try again in a different manner.**
 
-**Estimate of time needed to complete: ----**
+**Estimate of time needed to complete: 1 hour**
 
-**Start time: ------**
+**Start time: 10:00**
 
-**Finish time:--------**
+**Finish time:12:00am**
 
-**Actual time needed to complete: ------**
+**Actual time needed to complete: 2 hours**
 
 ## Our Daigram:
 
