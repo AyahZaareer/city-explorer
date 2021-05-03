@@ -1,6 +1,7 @@
 # City Explorer
 
 **Author*:Ayah Zaareer
+
 **Version**: 1.0.0 (increment the patch/fix version number if you make more commits past your first submission)
 
 ## Overview
@@ -31,7 +32,7 @@
 **Finish time:5:00pm**
 
 **Actual time needed to complete: 1 hour**
-
+------------------------
 
 **Name of feature :feature#2 . Locations: As a user of City Explorer, I want to enter the name of a location so that I can see the exact latitude and longitude of that location.**
 
@@ -43,6 +44,8 @@
 
 **Actual time needed to complete: one hour**
 
+---------------------------------------
+
 **Name of feature :feature#3 . Map: As a user, I want to see a map of the city so that I can see the layout of the area I want to explore.**
 
 **Estimate of time needed to complete: one hour**
@@ -53,6 +56,8 @@
 
 **Actual time needed to complete: 1.5 hour**
 
+-------------------------------------------
+
 **Name of feature :feature#4 Errors: As a user, I want clear messages if something goes wrong so I know if I need to make any changes or try again in a different manner.**
 
 **Estimate of time needed to complete: ----**
@@ -62,7 +67,6 @@
 **Finish time:--------**
 
 **Actual time needed to complete: ------**
-
 
 ## Our Daigram:
 
