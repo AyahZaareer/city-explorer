@@ -1,6 +1,6 @@
 # City Explorer
 
-**Author*:Ayah Zaareer
+**Author :Ayah Zaareer **
 
 **Version**: 1.0.0 (increment the patch/fix version number if you make more commits past your first submission)
 
