@@ -19,6 +19,8 @@
 
 
  ## My deployed link: city-exeplorer-ayah.netlify.app
+ 
+ ## class 6:
 
 **Name of feature :feature#1 Set up your React repository & API keys.**
 
@@ -65,3 +67,25 @@
 ## Our Daigram:
 
 ![image](https://user-images.githubusercontent.com/79833733/116830174-f18bd900-abb0-11eb-8ba1-de7ec6f62512.png)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## class 7:
+###  My partner is Mohammad Abu Mattar .
+#### He and I did a review code.He shared with me the code he wrote and I looked at it. It was excellent for me, and I understood most of it and which I did not understand Muhammad helped me to understand it.
+#### So many use the state that I don't know what it means and how to use it. And also some functions that I do not understand what they do. But Muhammad helped me understand that which is not understood by me.
+
+
+**Name of feature :feature#4 Errors: **
+
+**Estimate of time needed to complete: ----**
+
+**Start time: ------**
+
+**Finish time:--------**
+
+**Actual time needed to complete: ------**
+
+## Our Daigram:
+
+![image](https://user-images.githubusercontent.com/79833733/116915394-9f9c8f00-ac54-11eb-910a-ffb9992e6a82.png)
+
