@@ -17,8 +17,8 @@ export class App extends React.Component {
       output2: '',
       pro: process.env.REACT_APP_LOCATION,
       keyin: process.env.REACT_APP_LOCATION_IQ_KEY,
-      weatherData: false
-      // we: process.env.REACT_APP_WEATHER
+      weatherData: false,
+      we: process.env.REACT_APP_WEATHER
 
     };
   }
@@ -26,7 +26,7 @@ export class App extends React.Component {
     try {
 
       e.preventDefault();
-      const weatherurl = `http://localhost:3030/weather`;
+      const weatherurl = `${this.state.we}/weather`;
       const req2 = await axios.get(weatherurl);
       console.log(req2);
 
@@ -34,11 +34,14 @@ export class App extends React.Component {
       const req = await axios.get(url);
       this.setState({
         data: req.data[0],
+
         weatherData: req2.data,
         show: true,
         output1: 'Welcome to',
         output2: 'is located at'
       });
+      // console.log(this.state.data);
+      // console.log(this.state.data);
       console.log(this.state.weatherData[0].date);
     }
 
