@@ -13,16 +13,25 @@ export class App extends React.Component {
       data: '',
       show: true,
       output1: '',
-      output2: ''
+      output2: '',
+      pro: process.env.REACT_APP_LOCATION,
+      keyin: process.env.REACT_APP_LOCATION_IQ_KEY,
+      weatherData: {},
+      we: process.env.REACT_APP_WEATHER
+
     };
   }
   getLocation = async (e) => {
     try {
+
       e.preventDefault();
-      const url = `https://us1.locationiq.com/v1/search.php?key=pk.d36871f015649f915282f374cff76628&q=${this.state.searchQuery}&format=json`;
+      const weatherurl = `${this.state.we}`;
+      const req2 = await axios.get(weatherurl);
+      const url = `${this.state.pro}key=${this.state.keyin}&q=${this.state.searchQuery}&format=json`;
       const req = await axios.get(url);
       this.setState({
         data: req.data[0],
+        weatherData: req2.data,
         show: true,
         output1: 'Welcome to',
         output2: 'is located at'
@@ -87,6 +96,7 @@ export class App extends React.Component {
             {this.state.data.display_name} {this.state.output2} {this.state.data.lat} {this.state.data.lon}
           </p>
           {this.state.data ? <img src={`https://maps.locationiq.com/v3/staticmap?key=pk.d36871f015649f915282f374cff76628&q&center=${this.state.data.lat},${this.state.data.lon}&zoom=10`} alt='' /> : ''}
+          <p>{this.state.weatherData}</p>
           <h4>&copy;Code Fellows</h4>
 
         </div>
