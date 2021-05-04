@@ -16,8 +16,8 @@ export class App extends React.Component {
       output2: '',
       pro: process.env.REACT_APP_LOCATION,
       keyin: process.env.REACT_APP_LOCATION_IQ_KEY,
-      weatherData: {},
-      we: process.env.REACT_APP_WEATHER
+      // weatherData: {},
+      // we: process.env.REACT_APP_WEATHER
 
     };
   }
@@ -25,13 +25,13 @@ export class App extends React.Component {
     try {
 
       e.preventDefault();
-      const weatherurl = `${this.state.we}`;
-      const req2 = await axios.get(weatherurl);
+      // const weatherurl = `${this.state.we}`;
+      // const req2 = await axios.get(weatherurl);
       const url = `${this.state.pro}key=${this.state.keyin}&q=${this.state.searchQuery}&format=json`;
       const req = await axios.get(url);
       this.setState({
         data: req.data[0],
-        weatherData: req2.data,
+        // weatherData: req2.data,
         show: true,
         output1: 'Welcome to',
         output2: 'is located at'
