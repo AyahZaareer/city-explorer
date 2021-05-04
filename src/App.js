@@ -3,6 +3,7 @@ import axios from 'axios';
 // import Main from './component/main';
 // import Header from './component/header';
 // import Footer from './component/footer';
+import Weather from './com/Weather';
 
 
 export class App extends React.Component {
@@ -11,12 +12,12 @@ export class App extends React.Component {
     this.state = {
       searchQuery: '',
       data: '',
-      show: true,
+      show: false,
       output1: '',
       output2: '',
       pro: process.env.REACT_APP_LOCATION,
       keyin: process.env.REACT_APP_LOCATION_IQ_KEY,
-      // weatherData: {},
+      weatherData: false
       // we: process.env.REACT_APP_WEATHER
 
     };
@@ -25,18 +26,22 @@ export class App extends React.Component {
     try {
 
       e.preventDefault();
-      // const weatherurl = `${this.state.we}`;
-      // const req2 = await axios.get(weatherurl);
+      const weatherurl = `http://localhost:3030/weather`;
+      const req2 = await axios.get(weatherurl);
+      console.log(req2);
+
       const url = `${this.state.pro}key=${this.state.keyin}&q=${this.state.searchQuery}&format=json`;
       const req = await axios.get(url);
       this.setState({
         data: req.data[0],
-        // weatherData: req2.data,
+        weatherData: req2.data,
         show: true,
         output1: 'Welcome to',
         output2: 'is located at'
       });
+      console.log(this.state.weatherData[0].date);
     }
+
     catch (erorr) {
       this.setState({
         show: false
@@ -96,7 +101,10 @@ export class App extends React.Component {
             {this.state.data.display_name} {this.state.output2} {this.state.data.lat} {this.state.data.lon}
           </p>
           {this.state.data ? <img src={`https://maps.locationiq.com/v3/staticmap?key=pk.d36871f015649f915282f374cff76628&q&center=${this.state.data.lat},${this.state.data.lon}&zoom=10`} alt='' /> : ''}
-          <p>{this.state.weatherData}</p>
+          { this.state.weatherData &&
+            // <p>{this.state.weatherData[0].description}</p>} /}
+            <Weather weatherData={this.state.weatherData} />}
+
           <h4>&copy;Code Fellows</h4>
 
         </div>
