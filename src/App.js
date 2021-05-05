@@ -12,7 +12,7 @@ export class App extends React.Component {
     this.state = {
       searchQuery: '',
       data: '',
-      show: false,
+      show: true,
       output1: '',
       output2: '',
       pro: process.env.REACT_APP_LOCATION,
@@ -26,7 +26,7 @@ export class App extends React.Component {
     try {
 
       e.preventDefault();
-      const weatherurl = `${this.state.we}/weather`;
+      const weatherurl = `http://localhost:3078/weather`;
       const req2 = await axios.get(weatherurl);
       console.log(req2);
 
@@ -42,7 +42,7 @@ export class App extends React.Component {
       });
       // console.log(this.state.data);
       // console.log(this.state.data);
-      console.log(this.state.weatherData[0].date);
+      // console.log(this.state.weatherData[0].date);
     }
 
     catch (erorr) {
@@ -55,65 +55,61 @@ export class App extends React.Component {
     this.setState({ searchQuery: e.target.value });
 
   }
-  again = (e) => {
-    e.preventDefault();
-    this.setState({
-      show: true
-    });
+  again = () => {
+    window.location.reload();
   }
   render() {
-    if (this.state.show === false) {
-      return (
-        <div>
-          <header>
-            <h1>City Exploder</h1>
-          </header>
-          <h4>you didn't put correct data</h4>
-          <button id="try" onClick={this.again}>try again</button>
-          <h4>&copy;Code Fellows</h4>
+    return (
+      <div>
+        {
+          this.state.show === false &&
+          <div>
+            <header>
+              <h1>City Exploder</h1>
+            </header>
+            <h4>you didn't put correct data</h4>
+            <button id="try" onClick={this.again}>try again</button>
+            <h4>&copy;Code Fellows</h4>
 
-        </div>
-      );
+          </div>
+        }
+        {
+          this.state.show === true &&
+          <div>
+            <header>
+              <h1>City Exploder</h1>
+            </header>
 
+            <form onSubmit={this.getLocation}>
+              <label for='city name'>Where would you like explorer?</label>
+              <br />
+              <input onChange={this.updateSearchQuery} type='text' placeholder='city name' />
+              {/* <input type='submit' value='get city' /> */}
+              <br />
+              <br />
+              <button type='submit'>Exploer!</button>
+            </form>
+            <p>
+              {this.state.output1}{this.state.data.display_name}
+            </p>
 
-    }
-    else {
+            <b />
+            <p>
+              {this.state.data.display_name} {this.state.output2} {this.state.data.lat} {this.state.data.lon}
+            </p>
+            {this.state.data ? <img src={`https://maps.locationiq.com/v3/staticmap?key=pk.d36871f015649f915282f374cff76628&q&center=${this.state.data.lat},${this.state.data.lon}&zoom=10`} alt='' /> : ''}
+            {this.state.weatherData &&
+              // <p>{this.state.weatherData[0].description}</p>} /}
+              <Weather
+                weatherData={this.state.weatherData} />}
 
+            <h4>&copy;Code Fellows</h4>
 
-      return (
-        <div>
-          <header>
-            <h1>City Exploder</h1>
-          </header>
+          </div>
 
-          <form onSubmit={this.getLocation}>
-            <label for='city name'>Where would you like explorer?</label>
-            <br />
-            <input onChange={this.updateSearchQuery} type='text' placeholder='city name' />
-            {/* <input type='submit' value='get city' /> */}
-            <br />
-            <br />
-            <button type='submit'>Exploer!</button>
-          </form>
-          <p>
-            {this.state.output1}{this.state.data.display_name}
-          </p>
-
-          <b />
-          <p>
-            {this.state.data.display_name} {this.state.output2} {this.state.data.lat} {this.state.data.lon}
-          </p>
-          {this.state.data ? <img src={`https://maps.locationiq.com/v3/staticmap?key=pk.d36871f015649f915282f374cff76628&q&center=${this.state.data.lat},${this.state.data.lon}&zoom=10`} alt='' /> : ''}
-          { this.state.weatherData &&
-            // <p>{this.state.weatherData[0].description}</p>} /}
-            <Weather
-              weatherData={this.state.weatherData} />}
-
-          <h4>&copy;Code Fellows</h4>
-
-        </div>
-      );
-    }
+        }
+      </div>
+    );
   }
 
 
@@ -123,4 +119,3 @@ export class App extends React.Component {
 
 
 export default App;
-

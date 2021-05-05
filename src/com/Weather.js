@@ -4,8 +4,6 @@ export class Weather extends Component {
   render() {
     return (
       this.props.weatherData.map(data => {
-        console.log(this.props);
-
         return (
           <div>
             <p>{data.date}</p>
@@ -20,4 +18,3 @@ export class Weather extends Component {
 }
 
 export default Weather;
-
