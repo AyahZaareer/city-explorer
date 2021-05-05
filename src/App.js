@@ -106,7 +106,8 @@ export class App extends React.Component {
           {this.state.data ? <img src={`https://maps.locationiq.com/v3/staticmap?key=pk.d36871f015649f915282f374cff76628&q&center=${this.state.data.lat},${this.state.data.lon}&zoom=10`} alt='' /> : ''}
           { this.state.weatherData &&
             // <p>{this.state.weatherData[0].description}</p>} /}
-            <Weather weatherData={this.state.weatherData} />}
+            <Weather
+              weatherData={this.state.weatherData} />}
 
           <h4>&copy;Code Fellows</h4>
 
