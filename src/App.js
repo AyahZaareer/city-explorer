@@ -57,11 +57,12 @@ export class App extends React.Component {
       show: true,
 
 
+
     });
 
   }
   // getMovieData = async () => {
-  //   const movieurl = `http://localhost:3078/weather?lat=${this.state.data.lat}&lon=${this.state.data.lon}`;
+  //   const movieurl = `http://localhost:3078/movie`;
   //   const req3 = await axios.get(movieurl);
   //   console.log(req3);
   //   this.setState({
