@@ -2,9 +2,11 @@ import React from 'react';
 import axios from 'axios';
 // import Main from './component/main';
 // import Header from './component/header';
-// import Footer from './component/footer';
+import Footer from './com/footer';
 import Weather from './com/Weather';
 import Movie from './com/movie';
+import { CardColumns } from 'react-bootstrap';
+
 
 
 
@@ -21,7 +23,7 @@ export class App extends React.Component {
       keyin: process.env.REACT_APP_LOCATION_IQ_KEY,
       weatherData: false,
       we: process.env.REACT_APP_WEATHER,
-      movieData: []
+      movieData: false
 
     };
   }
@@ -41,8 +43,9 @@ export class App extends React.Component {
       // console.log(this.state.data);
       // console.log(this.state.data);
       // console.log(this.state.weatherData[0].date);
-      this.getWeatherData();
       this.getMovieData();
+      this.getWeatherData();
+
     }
 
     catch (erorr) {
@@ -125,20 +128,38 @@ export class App extends React.Component {
             {this.state.weatherData &&
               // <p>{this.state.weatherData[0].description}</p>} /}
               <div>
-                <Weather
-                  weatherData={this.state.weatherData} />
+                <CardColumns>
+                  <Weather
+                    weatherData={this.state.weatherData} />
+                </CardColumns>
 
+
+              </div>
+            }
+
+            {this.state.movieData &&
+              <div >
 
                 <Movie
                   movieData={this.state.movieData} />
-              </div>}
 
-            <h4>&copy;Code Fellows</h4>
+
+
+
+              </div>}
 
           </div>
 
+
+
+
+
+
+
         }
+        <Footer />
       </div>
+
     );
   }
 
