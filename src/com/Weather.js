@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+
 export class Weather extends Component {
   render() {
     return (
@@ -8,6 +9,8 @@ export class Weather extends Component {
           <div>
             <p>{data.date}</p>
             <p>{data.description}</p>
+
+
 
           </div>
         );
