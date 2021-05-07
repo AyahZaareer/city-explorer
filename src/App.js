@@ -4,6 +4,8 @@ import axios from 'axios';
 // import Header from './component/header';
 // import Footer from './component/footer';
 import Weather from './com/Weather';
+import Movie from './com/movie';
+
 
 
 export class App extends React.Component {
@@ -19,7 +21,7 @@ export class App extends React.Component {
       keyin: process.env.REACT_APP_LOCATION_IQ_KEY,
       weatherData: false,
       we: process.env.REACT_APP_WEATHER,
-      // movieData: ''
+      movieData: []
 
     };
   }
@@ -40,6 +42,7 @@ export class App extends React.Component {
       // console.log(this.state.data);
       // console.log(this.state.weatherData[0].date);
       this.getWeatherData();
+      this.getMovieData();
     }
 
     catch (erorr) {
@@ -51,27 +54,27 @@ export class App extends React.Component {
   getWeatherData = async () => {
     const weatherurl = `${this.state.we}/weather?lat=${this.state.data.lat}&lon=${this.state.data.lon}`;
     const req2 = await axios.get(weatherurl);
-    console.log(req2);
+    // console.log(req2);
     this.setState({
       weatherData: req2.data,
       show: true,
 
 
-
     });
 
   }
-  // getMovieData = async () => {
-  //   const movieurl = `http://localhost:3078/movie`;
-  //   const req3 = await axios.get(movieurl);
-  //   console.log(req3);
-  //   this.setState({
-  //     movieData: req3.data,
-  //     show: true,
+  getMovieData = async () => {
+    const movieurl = `${this.state.we}/movie?query=${this.state.searchQuery}&limit=10`;
+    const req3 = await axios.get(movieurl);
+    console.log(req3);
+    this.setState({
+      movieData: req3.data,
+      show: true,
 
-  //   });
+    });
+    console.log(this.state.movieData);
 
-  // }
+  }
   updateSearchQuery = (e) => {
     this.setState({ searchQuery: e.target.value });
 
@@ -121,8 +124,14 @@ export class App extends React.Component {
             {this.state.data ? <img src={`https://maps.locationiq.com/v3/staticmap?key=pk.d36871f015649f915282f374cff76628&q&center=${this.state.data.lat},${this.state.data.lon}&zoom=10`} alt='' /> : ''}
             {this.state.weatherData &&
               // <p>{this.state.weatherData[0].description}</p>} /}
-              <Weather
-                weatherData={this.state.weatherData} />}
+              <div>
+                <Weather
+                  weatherData={this.state.weatherData} />
+
+
+                <Movie
+                  movieData={this.state.movieData} />
+              </div>}
 
             <h4>&copy;Code Fellows</h4>
 
