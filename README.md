@@ -131,11 +131,36 @@
 
 **Finish time: 2:30 am**
 
-**Actual time needed to complete:3 half hour**
+**Actual time needed to complete: half hour**
 
 
 
 ## Our Daigram:
 
 ![image](https://user-images.githubusercontent.com/79833733/117518772-b838dc00-afa9-11eb-8034-a8de48feb89c.png)
+
+-------------------------------------------------------------------------
+
+ ## class 9:
+ **Name of feature :feature#1 1. Refactor: Modularize the back-end codebase.**
+
+**Estimate of time needed to complete:1 hour**
+
+**Start time: 9:30 pm**
+
+**Finish time: 10:00 pm**
+
+**Actual time needed to complete:half hour**
+
+
+**Name of feature :feature#1 2. Refactor: Componentize the front-end codebase.**
+
+**Estimate of time needed to complete:1 hour**
+
+**Start time: 10:30 pm**
+
+**Finish time: 11:00 pm**
+
+**Actual time needed to complete:half hour**
+
 
