@@ -94,3 +94,48 @@
 
 ![image](https://user-images.githubusercontent.com/79833733/116915394-9f9c8f00-ac54-11eb-910a-ffb9992e6a82.png)
 
+---------------------------------------------------
+## class 8:
+###  My partner is Mohammad Abdelmajed  Jaradat .
+#### He and I did a review code.He shared with me the code he wrote and I looked at it. It was excellent for me, and I understood most of it and which I did not understand Muhammad helped me to understand it.
+#### So many use the state that I don't know what it means and how to use it. And also some functions that I do not understand what they do. But Muhammad helped me understand that which is not understood by me.
+
+
+**Name of feature :feature#1 1. Weather (live): As a user of City Explorer, I want to see weather info for the city I searched, so that I know how to pack for an upcoming trip..**
+
+**Estimate of time needed to complete:2 hour**
+
+**Start time: 4:30 pm**
+
+**Finish time: 7:00**
+
+**Actual time needed to complete: 2.5 hours**
+
+**Name of feature :feature#1 2. Movies: As a user of City Explorer, I want to see info about movies related to the city I searched, so that I can learn more about the destination.**
+
+**Estimate of time needed to complete:2 hour**
+
+**Start time: 10:00 pm**
+
+**Finish time: 1:00 am**
+
+**Actual time needed to complete:3 hours**
+
+
+
+**Name of feature :feature#1 3. Publish: Deploy your server. As a user, I want to access the City Explorer application on the web, so that anyone can explore from anywhere..**
+
+**Estimate of time needed to complete:half hour**
+
+**Start time: 2:00 am**
+
+**Finish time: 2:30 am**
+
+**Actual time needed to complete:3 half hour**
+
+
+
+## Our Daigram:
+
+![image](https://user-images.githubusercontent.com/79833733/117518772-b838dc00-afa9-11eb-8034-a8de48feb89c.png)
+
