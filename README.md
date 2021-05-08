@@ -164,3 +164,16 @@
 **Actual time needed to complete:half hour**
 
 
+--------------------------------------------------------------------------
+ ## class 10:
+ **Name of feature :feature#11: Performance: As a user, I want the application to work with recent results, so that I can see info without the app doing unnecessary API calls.**
+
+**Estimate of time needed to complete:1 hour**
+
+**Start time: 4:30 pm**
+
+**Finish time: 6:00 pm**
+
+**Actual time needed to complete:1.5 hour**
+
+
