@@ -62,7 +62,6 @@ export class App extends React.Component {
       weatherData: req2.data,
       show: true,
 
-
     });
 
   }
